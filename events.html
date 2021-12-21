@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Exploring Events</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, nesciunt.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, in corporis? Sit, placeat nobis impedit ratione consequatur quam quas iste?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit earum magnam similique consectetur iusto delectus quam at eligendi iste nulla doloremque corrupti maxime, ullam nihil dolor nobis libero repellat velit!</p>
+
+    <button id="firstBtn">Button-1</button>
+    <button id="secondBtn">Button-2</button>
+    <button id="thirdBtn">Button-3</button>
+
+
+
+
+    <script>
+
+    // First Way
+    var buttonOne = document.getElementById('firstBtn');
+    buttonOne.style.cssText = 'background-color:orange; font-size:20px; color:white; border:none; border-radius:08px';
+    
+    buttonOne.addEventListener('click', function(){
+        document.body.style.backgroundColor= 'orange';
+        document.body.style.color= "white";
+    });
+
+    // Second Way
+    function navy(){
+        document.body.style.backgroundColor= 'navy';
+        document.body.style.color= 'white';
+    };
+    
+    var buttonSecond = document.getElementById('secondBtn');
+    buttonSecond.style.cssText = 'background-color:navy; font-size:20px; color:white; border:none; border-radius:08px';
+
+    buttonSecond.addEventListener('click', navy);
+
+    // Third Way
+    function reset(){
+        document.body.style.backgroundColor= 'white';
+        document.body.style.color= 'black';
+    };
+    
+    var buttonThird = document.getElementById('thirdBtn');
+    buttonThird.style.cssText = 'background-color:green; font-size:20px; color:white; border:none; border-radius:08px';
+
+    buttonThird.onclick = reset;
+    </script>
+</body>
+</html>
